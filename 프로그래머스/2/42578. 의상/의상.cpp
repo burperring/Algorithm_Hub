@@ -1,0 +1,27 @@
+#include<iostream>
+#include <string>
+#include <vector>
+#include <map>
+
+using namespace std;
+
+int solution(vector<vector<string>> clothes) {
+    int answer = 1;
+    
+    map<string, int> CType;
+    
+    for(int i = 0; i < clothes.size(); i++){
+        if(CType.find(clothes[i][1]) != CType.end())
+            CType[clothes[i][1]]++;
+        else
+            CType.insert({clothes[i][1],1});
+    }
+    
+    for(auto iter = CType.begin(); iter != CType.end(); ++iter){
+        answer = answer * (iter->second + 1);
+    }
+
+    answer--;
+    
+    return answer;
+}
