@@ -17,9 +17,7 @@ string solution(string s) {
     
     sort(v.begin(), v.end());
     
-    answer += to_string(v.front());
-    answer += " ";
-    answer += to_string(v.back());
-    
+    answer = to_string(v.front()) + " " + to_string(v.back());
+
     return answer;
 }
