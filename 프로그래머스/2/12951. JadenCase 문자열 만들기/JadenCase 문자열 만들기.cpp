@@ -5,26 +5,10 @@ using namespace std;
 
 string solution(string s) {
     string answer = "";
-    bool bFirst = true;
-    
-    for(int i = 0; i < s.length(); i++){
-        if(bFirst){
-            if('a' <= s[i] && s[i] <= 'z')
-                s[i] -= 32;
-            
-            if(s[i] == ' ')
-                bFirst = true;
-            else
-                bFirst = false;
-        }
-        else if(s[i] == ' '){
-            bFirst = true;
-        }
-        else{
-            if('A' <= s[i] && s[i] <= 'Z')
-                s[i] += 32;
-        }
-    }
-    
-    return s;
+
+    answer += toupper(s[0]);
+    for (int i = 1; i < s.size(); i++)
+        s[i - 1] == ' ' ? answer += toupper(s[i]) : answer += tolower(s[i]);
+
+    return answer;
 }
