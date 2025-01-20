@@ -5,16 +5,9 @@ using namespace std;
 
 int solution(int n, int a, int b)
 {
-    int answer = 1;
+    int answer = 0;
 
-    while(1){
-        if(abs(a - b) == 1){
-            if(a > b && a % 2 == 0)
-                break;
-            if(b > a && b % 2 == 0)
-                break;
-        }
-        
+    while(a != b){
         a = (a + 1) / 2;
         b = (b + 1) / 2;
         answer++;
