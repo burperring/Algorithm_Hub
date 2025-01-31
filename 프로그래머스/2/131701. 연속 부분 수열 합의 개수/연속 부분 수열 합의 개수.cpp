@@ -1,13 +1,13 @@
 #include <string>
 #include <vector>
-#include <set>
+#include <unordered_set>
 
 using namespace std;
 
 int solution(vector<int> elements) {
     int answer = 0;
     int size = 0, eleSize = elements.size();
-    set<int> s;
+    unordered_set<int> s;
     
     while(size != eleSize){
         size++;
