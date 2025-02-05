@@ -8,7 +8,6 @@ using namespace std;
 int solution(vector<int> priorities, int location) {
     int answer = 0;
     vector<int> q = priorities;
-    
     sort(priorities.begin(), priorities.end(), greater<int>());
     
     while(1){
