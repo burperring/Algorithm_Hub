@@ -15,7 +15,6 @@ string solution(string number, int k) {
             }
             else if(answer[i] > answer[i + 1] && i == answer.size()-2){
                 answer.erase(answer.begin() + i + 1);
-                cout << i << endl;
                 break;
             }
         }
