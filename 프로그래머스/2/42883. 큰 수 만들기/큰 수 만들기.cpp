@@ -19,7 +19,7 @@ string solution(string number, int k) {
                 break;
             }
         }
-        k--;
+        k--; 
     }
     
     return answer;
