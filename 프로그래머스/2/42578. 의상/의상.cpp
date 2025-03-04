@@ -1,20 +1,17 @@
 #include<iostream>
 #include <string>
 #include <vector>
-#include <map>
+#include <unordered_map>
 
 using namespace std;
 
 int solution(vector<vector<string>> clothes) {
     int answer = 1;
     
-    map<string, int> CType;
+    unordered_map<string, int> CType;
     
     for(int i = 0; i < clothes.size(); i++){
-        if(CType.find(clothes[i][1]) != CType.end())
-            CType[clothes[i][1]]++;
-        else
-            CType.insert({clothes[i][1],1});
+        CType[clothes[i][1]]++;
     }
     
     for(auto iter = CType.begin(); iter != CType.end(); ++iter){
