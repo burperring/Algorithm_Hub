@@ -18,9 +18,11 @@ int solution(vector<vector<string>> clothes) {
     }
     
     for(auto iter = CType.begin(); iter != CType.end(); ++iter){
+        // 안입는 경우 + 1
         answer = answer * (iter->second + 1);
     }
 
+    // 모두 벗은 경우 -1
     answer--;
     
     return answer;
