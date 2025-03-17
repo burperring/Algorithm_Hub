@@ -8,11 +8,9 @@ int gcd(int a, int b){
 }
 
 long long solution(int w,int h) {
-    //if(w == h) return w * h - w;
-    
     int cnt = gcd(w, h);
     int x = w / cnt;
     int y = h / cnt;
     
-    return ((ll)w * (ll)h) - ((ll)x + (ll)y - 1) * (ll)cnt;
+    return ((ll)w * (ll)h) - (x + y - 1) * cnt;
 }
