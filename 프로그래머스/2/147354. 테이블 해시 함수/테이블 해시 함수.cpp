@@ -14,7 +14,6 @@ bool cmp(vector<int> v1, vector<int> v2){
 
 int solution(vector<vector<int>> data, int col, int row_begin, int row_end) {
     int answer = 0;
-    vector<int> v;
     iCol = col;
     sort(data.begin(), data.end(), cmp);
     
@@ -23,11 +22,7 @@ int solution(vector<vector<int>> data, int col, int row_begin, int row_end) {
         for(auto x : data[i]){
             num += (x % (i + 1));
         }
-        v.push_back(num);
-    }
-    
-    for(auto x : v){
-        answer = answer ^ x;
+        answer = answer ^ num;
     }
         
     return answer;
