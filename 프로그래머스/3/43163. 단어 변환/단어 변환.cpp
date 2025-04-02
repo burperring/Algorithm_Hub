@@ -27,9 +27,9 @@ int solution(string begin, string target, vector<string> words) {
     vector<bool> b(51);
     vWords = words;
     
-    int a = find(words.begin(), words.end(), target) - words.begin();
-    if(a == words.size())
-        return answer = 0;
+    auto it = find(words.begin(), words.end(), target);
+    if(it == words.end())
+        return 0;
     
     for(int i = 0; i <= words.size(); i++){
         string check;
