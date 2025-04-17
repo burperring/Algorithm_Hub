@@ -27,7 +27,8 @@ vector<int> solution(vector<string> operations) {
         answer.push_back(0);
         answer.push_back(0);
     }
-    else{
+    else
+    {
         answer.push_back(*max_element(vInt.begin(), vInt.end()));
         answer.push_back(*min_element(vInt.begin(), vInt.end()));
     }
