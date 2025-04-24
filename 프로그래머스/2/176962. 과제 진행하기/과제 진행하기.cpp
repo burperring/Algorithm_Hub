@@ -69,7 +69,7 @@ vector<string> solution(vector<vector<string>> plans) {
         s.pop();
         
         answer.push_back(work);
-    }
+    } 
     
     return answer;
 }
