@@ -27,7 +27,6 @@ int solution(string s) {
         
         num++;
         
-        
     }
     
     return answer;
