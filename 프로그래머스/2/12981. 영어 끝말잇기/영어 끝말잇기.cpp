@@ -16,7 +16,7 @@ vector<int> solution(int n, vector<string> words) {
         {
             answer.push_back((i + 1) % n == 0 ? n : (i + 1) % n);
             answer.push_back((i / n) + 1);
-            break;
+            return answer;
         }
         
         if(words[i][words[i].length() - 1] != words[i + 1][0])
@@ -25,13 +25,13 @@ vector<int> solution(int n, vector<string> words) {
             
             answer.push_back((iwrong + 1) % n == 0 ? n : (iwrong + 1) % n);
             answer.push_back((iwrong / n) + 1);
-            break;
+            return answer;
         }
         
         check.insert(words[i]);
     }
     
-    if (check.find(words.back()) != check.end() && answer.size() == 0)
+    if (check.find(words.back()) != check.end())
     {
         answer.push_back(words.size() % n == 0 ? n : words.size() % n);
         answer.push_back((words.size() - 1) / n + 1);
